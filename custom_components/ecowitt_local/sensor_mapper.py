@@ -162,7 +162,7 @@ class SensorMapper:
                 "totalrainin",
                 "wh40batt",
             ])
-        elif sensor_type.lower() in ("wh68", "weather_station"):
+        elif sensor_type.lower() in ("wh68", "weather_station") or "solar & wind" in sensor_type.lower():
             # Main weather station
             keys.extend([
                 "tempf",
@@ -179,7 +179,7 @@ class SensorMapper:
                 "uv",
                 "wh68batt",
             ])
-        elif sensor_type.lower() in ("wh69", "weather_station_wh69"):
+        elif sensor_type.lower() in ("wh69", "weather_station_wh69") or "temp & humidity & solar & wind & rain" in sensor_type.lower():
             # WH69 7-in-1 outdoor sensor array (uses hex IDs in common_list)
             keys.extend([
                 "0x02",  # Temperature
@@ -245,7 +245,7 @@ class SensorMapper:
                 "0x13",  # Rain total
                 "wh90batt",  # Battery level
             ])
-        elif sensor_type.lower() in ("wh25", "indoor_station"):
+        elif sensor_type.lower() in ("wh25", "indoor_station") or "temp & humidity & pressure" in sensor_type.lower():
             # Indoor temperature/humidity/pressure station
             keys.extend([
                 "tempinf",
@@ -254,7 +254,7 @@ class SensorMapper:
                 "baromabsin",
                 "wh25batt",
             ])
-        elif sensor_type.lower() in ("wh26", "indoor_temp_hum"):
+        elif sensor_type.lower() in ("wh26", "indoor_temp_hum") or "temp & humidity" in sensor_type.lower():
             # Indoor temperature/humidity sensor
             keys.extend([
                 "tempinf",
