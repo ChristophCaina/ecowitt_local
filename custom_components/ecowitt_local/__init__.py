@@ -363,6 +363,7 @@ def _get_sensor_type_display_name(sensor_type: str) -> str:
         "lightning": "Lightning Sensor",
         "rain": "Rain Sensor",
         "weather_station": "Weather Station",
+        "temp & humidity & solar & wind & rain": "Temp & Humidity & Solar & Wind & Rain",
     }
     
     return type_names.get(sensor_type_lower, "Sensor")
@@ -374,7 +375,8 @@ def _is_outdoor_sensor(sensor_type: str) -> bool:
     
     outdoor_types = {
         "wh51", "wh41", "wh55", "wh57", "wh40", "wh68",
-        "soil", "pm25", "leak", "lightning", "rain", "weather_station"
+        "soil", "pm25", "leak", "lightning", "rain", "weather_station",
+        "temp & humidity & solar & wind & rain",
     }
     
     return sensor_type_lower in outdoor_types
